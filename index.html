@@ -2,147 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hunter Glass | Cybersecurity Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunter Glass | Cybersecurity Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <meta name="theme-color" content="#111827" />
+  <meta name="theme-color" content="#f3ecdf" />
 </head>
 <body>
-  <header>
-    <h1>About Me</h1>
-  </header>
+  <div class="page-shell">
+    <header class="hero" id="top">
+      <div class="hero__label">Hunter Glass</div>
+      <div class="hero__layout">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">Cybersecurity professional · control validation · cloud and enterprise security</p>
+          <h1>Security controls, risk assessment, and continuous hardening across modern environments.</h1>
+          <p class="hero__summary">
+            Cybersecurity professional with experience implementing, testing, and validating security controls across enterprise and cloud environments.
+            Skilled in vulnerability management, configuration hardening, and risk assessment aligned with frameworks such as ISO 27001, SOC 2, and SCF.
+            Passionate about threat detection, remediation, and continuous improvement of security posture.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://www.linkedin.com/in/hunter-glass-734313195/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="button button--secondary" href="https://github.com/hunterg123" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
 
-  <main>
-    <nav class="toc" aria-label="Jump to sections">
-      <ul>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Technical Skills</a></li>
-      </ul>
-    </nav>
-
-    <section class="job">
-      <h2>Summary</h2>
-      <p>
-        Security-focused professional with expertise in vulnerability assessment, risk analysis, and implementing cyber security controls. Proficient in infrastructure hardening, secure SDLC implementation, software engineering, and integrating cybersecurity best practices across full-stack development workflows.
-      </p>
-    </section>
-
-    <span id="experience"></span>
-    <section class="job">
-      <h2>CBIZ Pivot Point Security | Risk Advisory</h2>
-      <div class="meta">
-        <span class="title">Cybersecurity Consultant</span>
-        <span class="duration">Jun 2024 – Present</span>
+        <aside class="hero__panel" aria-label="Professional snapshot">
+          <p class="hero__panel-label">Current focus</p>
+          <ul class="hero__facts">
+            <li>Security control assessment across infrastructure and cloud environments</li>
+            <li>Risk remediation aligned to ISO 27001, SOC 2, and SCF expectations</li>
+            <li>Threat detection, remediation planning, and continuous posture improvement</li>
+          </ul>
+        </aside>
       </div>
-      <ul>
-        <li>Led ISO 27001 gap assessments, risk assessments, and development of risk treatment plans, validating technical controls and identifying compliance gaps across client environments.</li>
-        <li>Directed ISO 27001 implementations by developing and deploying security policies, procedures, and controls to remediate identified gaps and strengthen overall security posture.</li>
-        <li>Conducted enterprise Standardized Control Assessments (SCA) to evaluate IT and security controls, identifying vulnerabilities and recommending targeted remediation.</li>
-      </ul>
-    </section>
+    </header>
 
-    <section class="job">
-      <h2>CBIZ Risk Advisory</h2>
-      <div class="meta">
-        <span class="title">Intern, IT/Internal Audit</span>
-        <span class="duration">Jan 2024 – Jul 2024</span>
-      </div>
-      <ul>
-        <li>Evaluated cybersecurity and ITGC controls to reduce compliance gaps and enhance audit readiness across infrastructure and data protection.</li>
-        <li>Produced risk-based audit reports outlining control weaknesses, supporting stakeholder transparency and effective remediation planning.</li>
-      </ul>
-    </section>
+    <main class="page-content">
+      <nav class="toc" aria-label="Jump to sections">
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certifications</a>
+        <a href="#skills">Technical Skills</a>
+      </nav>
 
-    <section class="job">
-      <h2>University of Kansas</h2>
-      <div class="meta">
-        <span class="title">Master’s Research Project – MeshMapper</span>
-        <span class="duration">May 2023 – Dec 2023</span>
-      </div>
-      <ul>
-        <li>Built a GIS tool using Google Cloud Platform and Google Maps API to auto-deploy encrypted Bluetooth Mesh nodes within a region for scalable IoT networks.</li>
-        <li>Implemented lightweight BLE encryption by modifying firmware on ESP32 development boards, mitigating sniffing and MITM attacks within Bluetooth mesh networks.</li>
-      </ul>
-    </section>
+      <section class="section section--experience" id="experience">
+        <div class="section__intro">
+          <p class="section__eyebrow">Experience</p>
+          <h2>Experience in control assessment, remediation, and security engineering.</h2>
+        </div>
 
-    <section class="job">
-      <h2>C3BE, University of Kansas</h2>
-      <div class="meta">
-        <span class="title">Contract Work</span>
-        <span class="duration">Jun 2023 – Jul 2023</span>
-      </div>
-      <ul>
-        <li>Mapped competencies to cybersecurity roles using the NICE framework and NVivo.</li>
-      </ul>
-    </section>
+        <div class="timeline">
+          <article class="role">
+            <div class="role__header">
+              <div>
+                <p class="role__org">CBIZ Technology</p>
+                <h3>Cybersecurity Consultant</h3>
+              </div>
+              <p class="role__duration">June 2024 - Present</p>
+            </div>
+            <ul class="detail-list">
+              <li>Assessed security controls across infrastructure and cloud environments against ISO 27001:2022 and SCF frameworks, translating audit findings into actionable steps and control implementations to strengthen clients&rsquo; security posture.</li>
+              <li>Collaborated with IT and DevOps teams to drive remediation efforts across all domains of the Secure Controls Framework, translating gaps into actionable security improvements.</li>
+              <li>Developed and enforced policies aligned with ISO 27001, improving clients&rsquo; risk posture and audit readiness.</li>
+              <li>Conducted internal audits and risk assessments supporting compliance with ISO 27001, SOC 2, and TISAX.</li>
+            </ul>
+          </article>
 
-    <section class="job">
-      <h2>Satcom Direct</h2>
-      <div class="meta">
-        <span class="title">Software Engineer Intern / Information Security Intern</span>
-        <span class="duration">May–Jul 2020, May–Aug 2021</span>
-      </div>
-      <ul>
-        <li>Developed full-stack features for a SaaS product within an Agile team, delivering scalable and maintainable code.</li>
-        <li>Enhanced SDLC security by evaluating and recommending an OWASP-compliant dependency tracking solution to mitigate supply chain risks.</li>
-      </ul>
-    </section>
+          <article class="role">
+            <div class="role__header">
+              <div>
+                <p class="role__org">CBIZ Technology</p>
+                <h3>Intern, IT and Internal Audit</h3>
+              </div>
+              <p class="role__duration">Jan 1, 2024 - Jun 2024</p>
+            </div>
+            <ul class="detail-list">
+              <li>Evaluated cybersecurity and ITGC controls to reduce compliance gaps and improve audit readiness across infrastructure and data protection.</li>
+              <li>Produced risk-based audit reports outlining control weaknesses, supporting stakeholder transparency and effective remediation planning.</li>
+            </ul>
+          </article>
 
-    <section class="job">
-      <h2>Hack The Box (Independent)</h2>
-      <div class="meta">
-        <span class="title">Hands-On Labs & Security Training</span>
-        <span class="duration">Ongoing</span>
-      </div>
-      <ul>
-        <li>Completed Linux and Windows-based boxes involving privilege escalation, lateral movement, and web exploitation.</li>
-        <li>Used tools like Nmap, Burp Suite, Metasploit, Ghidra, and Python for exploitation and analysis.</li>
-        <li>Experienced with reverse shells, post-exploitation, and Active Directory attacks.</li>
-        <li>Practiced TTPs aligned with real-world incident response and penetration testing workflows.</li>
-      </ul>
-    </section>
+          <article class="role">
+            <div class="role__header">
+              <div>
+                <p class="role__org">University of Kansas</p>
+                <h3>Master&rsquo;s Research Project, MeshMapper</h3>
+              </div>
+              <p class="role__duration">May 2023 - Dec 2023</p>
+            </div>
+            <ul class="detail-list">
+              <li>Built a GIS tool using Google Cloud Platform and Google Maps API to auto-deploy encrypted Bluetooth Mesh nodes within a region for scalable IoT networks.</li>
+              <li>Implemented lightweight BLE encryption by modifying firmware on ESP32 development boards, mitigating sniffing and man-in-the-middle attacks within Bluetooth mesh networks.</li>
+            </ul>
+          </article>
 
-    <section class="job" id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Master of Science in Computer Science | University of Kansas — Dec 2023</li>
-        <li>Bachelor of Science in Computer Science | University of Kansas — May 2022</li>
-      </ul>
-    </section>
+          <article class="role">
+            <div class="role__header">
+              <div>
+                <p class="role__org">Satcom Direct</p>
+                <h3>Software Engineer Intern and Information Security Intern</h3>
+              </div>
+              <p class="role__duration">May-Jul 2020, May-Aug 2021</p>
+            </div>
+            <ul class="detail-list">
+              <li>Integrated an OWASP dependency tracking solution into the CI/CD workflow, strengthening software supply-chain security.</li>
+              <li>Delivered scalable full-stack code enhancements for a SaaS platform while collaborating in Agile sprints.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-    <section class="job" id="certificates">
-      <h2>Professional Certifications</h2>
-      <ul>
-        <li>ISO/IEC 27001 Provisional Implementer — Jan 2025</li>
-        <li>CompTIA Security+ — Expected Aug 2025</li>
-      </ul>
-    </section>
+      <section class="section section--grid">
+        <div class="info-card" id="education">
+          <p class="section__eyebrow">Education</p>
+          <h2>Academic background</h2>
+          <ul class="detail-list">
+            <li>Master of Science in Computer Science, University of Kansas, Dec 2023</li>
+            <li>Bachelor of Science in Computer Science, University of Kansas, May 2022</li>
+          </ul>
+        </div>
 
-    <section class="job" id="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Core Security Domains:</strong> Penetration Testing, Vulnerability Management, Incident Response, Malware Analysis, Cloud Security, Ethical Hacking</li>
-        <li><strong>Programming Languages:</strong> C++, C, Python, Perl, SQL</li>
-        <li><strong>Tools:</strong> Metasploit, Nmap, Burp Suite, Wireshark, Ghidra, Docker, Kali Linux</li>
-        <li><strong>Security Concepts:</strong> Reverse Engineering, Cryptography, Virtualization, Secure SDLC</li>
-        <li><strong>Control Frameworks:</strong> ISO 27001, ISO 27701, ISO 27017, TISAX</li>
-      </ul>
-    </section>
+        <div class="info-card" id="certificates">
+          <p class="section__eyebrow">Certifications</p>
+          <h2>Certifications and membership</h2>
+          <ul class="detail-list">
+            <li>ISO/IEC 27001 Implementer, Jan 2025</li>
+            <li>CompTIA Security+, Oct 2025</li>
+            <li>Member, ISACA</li>
+          </ul>
+        </div>
+      </section>
 
-  <section class="job links">
-      <h2>Links</h2>
-      <ul>
-  <li><a href="https://github.com/hunterg123" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/in/hunter-glass-734313195/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      </ul>
-    </section>
-  </main>
+      <section class="section" id="skills">
+        <div class="section__intro">
+          <p class="section__eyebrow">Technical Skills</p>
+          <h2>Core tools, domains, and frameworks</h2>
+        </div>
 
-  <footer>
-    &copy; 2025 Hunter Glass
-  </footer>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Core Security Domains</h3>
+            <p>Penetration testing, vulnerability management, incident response, malware analysis, cloud security, and ethical hacking.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Programming</h3>
+            <p>C++, C, Python, Perl, and SQL.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Security Tooling</h3>
+            <p>Nmap, Metasploit, Burp Suite, Wireshark, Ghidra, Kali Linux, and Docker.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Security Focus</h3>
+            <p>Threat detection, remediation, configuration hardening, and continuous security posture improvement.</p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Control Frameworks</h3>
+            <p>ISO 27001, ISO 27701, ISO 27017, and TISAX.</p>
+          </article>
+
+          <article class="skill-card skill-card--accent">
+            <h3>Profiles</h3>
+            <div class="profile-links">
+              <a href="https://github.com/hunterg123" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/hunter-glass-734313195/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Hunter Glass</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
 </body>
 </html>
