@@ -47,11 +47,12 @@
     }
     p { margin: 0 0 1em; }
 
-    .job { margin-bottom: 26px; }
+    .job { margin-bottom: 34px; }
     .job__top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .job__top b { font-weight: 600; }
     .when { color: var(--dim); font-size: 16px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .job ul { margin: 6px 0 0; padding-left: 20px; }
+    .job p { margin: 6px 0 0; }
+    .job ul { margin: 8px 0 0; padding-left: 20px; }
     .job li { margin-bottom: 4px; }
     .job li::marker { color: var(--dim); }
 
@@ -100,48 +101,67 @@
 
     <div class="job">
       <div class="job__top"><span><b>Kiewit</b>, I&amp;C Engineer, cybersecurity</span><span class="when">Jul 2026 to now</span></div>
+      <p>My title is instrumentation and controls engineer, but my part of the work is cybersecurity and compliance for a restricted engineering environment.</p>
       <ul>
-        <li>Wrote the SOP for the quarterly user access review and make the keep or remove call on each account. Two reviews done so far.</li>
-        <li>Built the Power BI report that matches the authorized roster to AD group membership and sends each removal to the manager or a ticket.</li>
-        <li>Cybersecurity reviewer on client contracts.</li>
-        <li>Drafted redlines to an industry working group's response to DOE grid cybersecurity policy. They made it into the final draft.</li>
+        <li>Set up the quarterly user access review, which had no defined process before. I wrote the SOP, set the review cadence, and make the keep or remove call on every account. Two reviews done so far; the last one covered about 700 users.</li>
+        <li>Built a Power BI report that joins the authorized roster to Active Directory group membership. It flags anyone in the group who lacks the required authorization or background check, and anyone whose access lapsed but who is still in the group, then routes each removal to their manager or a ticket.</li>
+        <li>Maintain the company's compliance documentation set.</li>
+        <li>Act as the cybersecurity reviewer on client contracts: I answer the security questions and send clients feedback on their security requirements.</li>
+        <li>Drafted redlines to an industry supply chain working group's response to DOE grid cybersecurity policy (Jul to Sep 2026). My redlines were adopted in the final draft.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job__top"><span><b>PortalVision</b>, Co-founder</span><span class="when">Apr 2025 to now</span></div>
+      <p>A multi-tenant SaaS for NCAA athletics, live with its first program. I own the security and software stack.</p>
       <ul>
-        <li>Built the auth layer on Auth0: JWT and refresh-token validation (audience, issuer, user still active) and three levels of roles enforced in the database.</li>
-        <li>Tenant isolation, CORS and bearer-token checks on the API.</li>
-        <li>React, Spring Boot, PostgreSQL and Docker, hosted on Render.</li>
+        <li>Built the authentication layer on Auth0. The API validates JWTs and refresh tokens on audience, issuer, and whether the user is still active.</li>
+        <li>Designed three-tier role-based access (site admin, org admin, user) enforced in the application database, with tenant isolation across the data model so one program never sees another's data.</li>
+        <li>Locked down the API with a CORS policy and bearer-token checks on every call.</li>
+        <li>Own the Spring Security configuration, controllers, JPA layer, SQL schema and migrations.</li>
+        <li>Containerized development and deployment with Docker (Postgres, pgAdmin) and wrote the Python ingestion that loads data into Postgres.</li>
+        <li>Stack: React, Spring Boot, PostgreSQL, Auth0, Docker, hosted on Render.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job__top"><span><b>CBIZ Technology</b>, Associate Consultant</span><span class="when">Jul 2024 to Jun 2026</span></div>
+      <p>I was the primary consultant on every engagement I had, usually 8 to 10 at once, for SaaS, automotive and financial services clients.</p>
       <ul>
-        <li>Ran 8 to 10 client engagements at a time: SaaS, defense, automotive and financial services.</li>
-        <li>Led 3 ISO 27001 implementations through Stage 2. All 3 certified; one also got ISO 27701.</li>
-        <li>Fieldwork and control testing on 18+ audits, including 5 TISAX AL3 readiness audits.</li>
-        <li>Vendor risk reviews, risk registers, and tracking pentest findings against patch SLAs.</li>
-        <li>Worked in Drata and Vanta.</li>
+        <li>Led 3 ISO 27001 implementations end to end: wrote the policy set, ran the risk assessment, and took each client through Stage 1 and Stage 2. All 3 certified. One also certified to ISO 27701 as a processor, which meant building out the DPA, ROPA and PII inventory.</li>
+        <li>Ran fieldwork and control testing on 18+ audits: ISO 27001 internal audits in Vanta, SOC 2 internal audits against Security and Availability, and TISAX.</li>
+        <li>Ran 5 internal audits of clients' TISAX AL3 readiness, completed their VDA ISA self-assessments, and led 1 TISAX implementation.</li>
+        <li>Built and kept client risk registers from an SCF-based gap assessment, pentest findings and internal risks. I recommended treatment and tracked the client's remediation.</li>
+        <li>Reviewed vendor security inside ISO 27001 engagements: read vendor SOC 2 reports and questionnaires, tiered vendors by risk, scored inherent and residual risk, and checked the security clauses in contracts.</li>
+        <li>Tracked pentest findings against each client's vulnerability management SLA by CVSS score and escalated anything past the patch deadline to the risk register.</li>
+        <li>Mapped controls, policies and evidence in Drata for ISO 27001 and 27701, and told clients exactly which AWS, GCP and Okta evidence to pull.</li>
+        <li>Wrote 40+ security policies and procedures (access management, change management, incident response, SDLC), each with a named control owner.</li>
+        <li>Closed a Stage 2 gap by writing a client's backup procedure. They passed the backup and restore test and certified.</li>
+        <li>Helped build client business continuity and disaster recovery documentation and vetted a client's security awareness training program.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job__top"><span><b>CBIZ</b>, IT / Internal Audit Intern</span><span class="when">2024</span></div>
       <ul>
-        <li>Tested IT general controls against SOX and FDICIA.</li>
+        <li>Tested cybersecurity controls and IT general controls against FDICIA and SOX, and wrote up the high-risk findings in priority order for clients to fix.</li>
       </ul>
     </div>
 
     <h2>School</h2>
     <p>
-      M.S. in Computer Science from the University of Kansas (2023), focused on security: reverse
-      engineering, binary exploitation, network security and cryptography. My master's project was
-      MeshMapper, the device-mapping piece of a KU research project on secure Bluetooth mesh networks.
+      M.S. in Computer Science from the University of Kansas (Dec 2023), focused on security. Coursework
+      covered reverse engineering, binary exploitation, network security, cryptography, and IoT and
+      mobile security. In the labs I wrote buffer overflow exploits through to remote code execution
+      using Ghidra, GDB, Metasploit, Wireshark and nmap.
     </p>
-    <p>B.S. in Computer Science from KU (2022), with a cybersecurity certificate.</p>
+    <p>
+      My master's project was MeshMapper, the device-mapping platform for a KU research project on
+      secure Bluetooth mesh networks with encryption key rotation on ESP32 devices. It maps the mesh
+      devices inside a region you draw and checks that the network is reachable and reliable across it.
+      Built in JavaScript and HTML, hosted on GCP.
+    </p>
+    <p>B.S. in Computer Science from KU (May 2022), with a cybersecurity certificate.</p>
 
     <h2>Certifications</h2>
     <p>CompTIA Security+ (2025) and ISO/IEC 27001 Implementer (2025).</p>
