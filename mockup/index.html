@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunter Glass | Security Compliance &amp; Identity</title>
+  <meta name="description" content="Hunter Glass: security compliance and identity analyst in Kansas City. GRC, access governance, IAM and application security. 3 of 3 ISO 27001 implementations certified." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f3efe6;
+      --paper-2: #ebe5d8;
+      --card: #faf8f3;
+      --ink: #142030;
+      --ink-2: #33404f;
+      --muted: #66707b;
+      --line: rgba(20, 32, 48, 0.12);
+      --line-strong: rgba(20, 32, 48, 0.28);
+      --accent: #c9431a;
+      --accent-soft: rgba(201, 67, 26, 0.09);
+      --ok: #2f6b4f;
+      --serif: "Instrument Serif", Georgia, serif;
+      --sans: "Manrope", "Helvetica Neue", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+      --w: 1120px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #0f151c; --paper-2: #151d26; --card: #131b24;
+        --ink: #ece6d9; --ink-2: #c9c3b6; --muted: #8d949c;
+        --line: rgba(236, 230, 217, 0.1); --line-strong: rgba(236, 230, 217, 0.26);
+        --accent: #ff7a48; --accent-soft: rgba(255, 122, 72, 0.1); --ok: #7cc59f;
+      }
+    }
+    :root[data-theme="dark"] {
+      --paper: #0f151c; --paper-2: #151d26; --card: #131b24;
+      --ink: #ece6d9; --ink-2: #c9c3b6; --muted: #8d949c;
+      --line: rgba(236, 230, 217, 0.1); --line-strong: rgba(236, 230, 217, 0.26);
+      --accent: #ff7a48; --accent-soft: rgba(255, 122, 72, 0.1); --ok: #7cc59f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 28px; }
+    .mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* Top bar */
+    .bar { border-bottom: 1px solid var(--line); }
+    .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { font-family: var(--serif); font-size: 24px; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .nav { display: flex; gap: 26px; }
+    .nav a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav a:hover { color: var(--ink); }
+
+    /* Hero */
+    .hero { padding: 76px 0 56px; }
+    .hero .wrap { display: grid; grid-template-columns: 1.45fr 1fr; gap: 56px; align-items: end; }
+    .kicker { color: var(--accent); margin-bottom: 22px; display: flex; align-items: center; gap: 10px; }
+    .kicker::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+    h1 {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(44px, 6.4vw, 82px); line-height: 0.98; letter-spacing: -0.015em;
+    }
+    h1 em { font-style: italic; color: var(--accent); }
+    .lede { margin-top: 26px; max-width: 560px; font-size: 18px; color: var(--ink-2); }
+    .actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px;
+      font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid var(--ink);
+      transition: transform .2s, background .2s, color .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn--solid { background: var(--ink); color: var(--paper); }
+    .btn--ghost { background: transparent; }
+    .btn--ghost:hover { background: var(--ink); color: var(--paper); }
+
+    /* Record card */
+    .record { background: var(--card); border: 1px solid var(--line-strong); position: relative; }
+    .record__head { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px dashed var(--line-strong); color: var(--muted); }
+    .record__head b { color: var(--ok); font-weight: 500; }
+    .record dl { display: grid; grid-template-columns: 92px 1fr; }
+    .record dt, .record dd { padding: 11px 18px; border-bottom: 1px solid var(--line); }
+    .record dt { color: var(--muted); }
+    .record dd { font-size: 14.5px; font-weight: 500; }
+    .record dl > :nth-last-child(-n+2) { border-bottom: 0; }
+    .stamp {
+      position: absolute; right: -14px; top: -18px; transform: rotate(6deg);
+      border: 1.5px solid var(--accent); color: var(--accent); padding: 4px 10px; background: var(--paper);
+    }
+
+    /* Proof strip */
+    .proof { border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); background: var(--paper-2); }
+    .proof .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 28px 22px; border-left: 1px solid var(--line); }
+    .stat:first-child { border-left: 0; padding-left: 0; }
+    .stat__n { font-family: var(--serif); font-size: 52px; line-height: 1; }
+    .stat__n small { font-size: 26px; color: var(--muted); }
+    .stat__l { margin-top: 8px; font-size: 14px; color: var(--ink-2); max-width: 220px; }
+
+    /* Sections */
+    section { padding: 88px 0 0; }
+    .sec-head { display: grid; grid-template-columns: 220px 1fr; gap: 40px; margin-bottom: 40px; align-items: baseline; }
+    .sec-head .mono { color: var(--accent); }
+    h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4vw, 48px); line-height: 1.05; }
+
+    /* Two sides */
+    .sides { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-strong); }
+    .side { padding: 32px; background: var(--card); }
+    .side + .side { border-left: 1px solid var(--line-strong); }
+    .side h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .side p { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+    .side ul { list-style: none; }
+    .side li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; display: flex; gap: 12px; }
+    .side li::before { content: "+"; font-family: var(--mono); color: var(--accent); }
+
+    /* Case studies */
+    .cases { display: grid; gap: 0; border-top: 1px solid var(--line-strong); }
+    .case {
+      display: grid; grid-template-columns: 220px 1fr 260px; gap: 40px;
+      padding: 36px 0; border-bottom: 1px solid var(--line-strong);
+      transition: background .25s;
+    }
+    .case:hover { background: linear-gradient(90deg, var(--accent-soft), transparent 70%); }
+    .case__id { color: var(--muted); }
+    .case__id b { display: block; color: var(--accent); font-weight: 500; margin-bottom: 6px; }
+    .case h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; margin-bottom: 12px; }
+    .case p { color: var(--ink-2); font-size: 15.5px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .tag { font-family: var(--mono); font-size: 11.5px; padding: 3px 8px; border: 1px solid var(--line-strong); color: var(--ink-2); }
+    .result { border-left: 2px solid var(--accent); padding-left: 18px; align-self: start; }
+    .result .mono { color: var(--muted); margin-bottom: 8px; display: block; }
+    .result strong { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.15; display: block; }
+    .result span { display: block; margin-top: 6px; font-size: 14px; color: var(--muted); }
+    .result a { color: var(--accent); font-weight: 600; text-decoration: none; }
+
+    /* Timeline */
+    .timeline { border-top: 1px solid var(--line-strong); }
+    .role { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .role__when { color: var(--muted); }
+    .role h3 { font-size: 18px; font-weight: 700; }
+    .role h3 span { font-weight: 500; color: var(--muted); }
+    .role ul { margin-top: 10px; padding-left: 18px; color: var(--ink-2); font-size: 15px; }
+    .role li { margin: 4px 0; }
+    .role li::marker { color: var(--accent); }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line-strong); }
+    .skill { padding: 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); }
+    .skill:nth-child(3n) { border-right: 0; }
+    .skill:nth-last-child(-n+3) { border-bottom: 0; }
+    .skill h3 { color: var(--accent); margin-bottom: 12px; }
+    .skill p { font-size: 15px; color: var(--ink-2); }
+
+    /* Edu */
+    .edu { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+    .panel { border: 1px solid var(--line-strong); padding: 28px; background: var(--card); }
+    .panel h3 { font-size: 17px; font-weight: 700; }
+    .panel .mono { color: var(--muted); display: block; margin: 4px 0 10px; }
+    .panel p { font-size: 15px; color: var(--ink-2); }
+    .panel + .panel { }
+    .panel hr { border: 0; border-top: 1px solid var(--line); margin: 20px 0; }
+
+    /* Contact */
+    .contact { margin-top: 96px; background: var(--ink); color: var(--paper); padding: 72px 0; }
+    .contact .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: end; }
+    .contact h2 { font-size: clamp(40px, 5vw, 64px); }
+    .contact h2 em { color: var(--accent); }
+    .contact p { margin-top: 14px; color: color-mix(in srgb, var(--paper) 70%, transparent); max-width: 460px; }
+    .links { list-style: none; }
+    .links a {
+      display: flex; justify-content: space-between; padding: 14px 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--paper) 20%, transparent); text-decoration: none; font-weight: 600;
+      transition: padding .2s, color .2s;
+    }
+    .links a:hover { padding-left: 8px; color: var(--accent); }
+    .links .mono { opacity: .6; }
+    footer { background: var(--ink); color: var(--paper); border-top: 1px solid color-mix(in srgb, var(--paper) 15%, transparent); }
+    footer .wrap { display: flex; justify-content: space-between; padding: 18px 28px; opacity: .6; }
+
+    /* Entrance */
+    @media (prefers-reduced-motion: no-preference) {
+      .rise { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+      .rise:nth-child(2) { animation-delay: .08s; } .rise:nth-child(3) { animation-delay: .16s; }
+      .rise:nth-child(4) { animation-delay: .24s; } .rise:nth-child(5) { animation-delay: .32s; }
+      @keyframes rise { to { opacity: 1; transform: none; } }
+    }
+
+    /* Mobile */
+    @media (max-width: 860px) {
+      .wrap { padding: 0 16px; }
+      .nav { display: none; }
+      .hero { padding: 44px 0 40px; }
+      .hero .wrap, .sides, .edu, .contact .wrap { grid-template-columns: 1fr; }
+      .side + .side { border-left: 0; border-top: 1px solid var(--line-strong); }
+      .stamp { right: 10px; }
+      .proof .wrap { grid-template-columns: 1fr 1fr; }
+      .stat { padding: 22px 14px; }
+      .stat:nth-child(odd) { border-left: 0; padding-left: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .stat__n { font-size: 42px; }
+      section { padding-top: 64px; }
+      .sec-head, .case, .role { grid-template-columns: 1fr; gap: 12px; }
+      .case { padding: 28px 0; gap: 14px; }
+      .skills { grid-template-columns: 1fr; }
+      .skill { border-right: 0 !important; border-bottom: 1px solid var(--line) !important; }
+      .skill:last-child { border-bottom: 0 !important; }
+      footer .wrap { padding: 18px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="#top">Hunter Glass<span>.</span></a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <p class="mono kicker rise">Security compliance &middot; Identity &middot; Kansas City</p>
+          <h1 class="rise">Security controls that hold up in the <em>audit</em> and in <em>production.</em></h1>
+          <p class="lede rise">
+            I run GRC and access governance work, and I build identity systems. Three ISO 27001
+            implementations taken to certification, a quarterly access review I designed and own,
+            and the auth layer of a live multi-tenant SaaS.
+          </p>
+          <div class="actions rise">
+            <a class="btn btn--solid" href="#contact">Get in touch &rarr;</a>
+            <a class="btn btn--ghost" href="#">Resume (PDF)</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/hunter-glass-734313195/">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside class="record rise" aria-label="Profile summary">
+          <span class="mono stamp">Verified</span>
+          <div class="record__head mono"><span>Record HG-2026</span><b>&#9679; Active</b></div>
+          <dl class="mono">
+            <dt>Name</dt><dd>Hunter A. Glass</dd>
+            <dt>Base</dt><dd>Lenexa, KS &middot; KC metro</dd>
+            <dt>Focus</dt><dd>GRC, access governance, IAM, AppSec</dd>
+            <dt>Now</dt><dd>Kiewit &middot; Cybersecurity SME</dd>
+            <dt>Also</dt><dd>Co-founder, PortalVision</dd>
+            <dt>Certs</dt><dd>Security+ &middot; ISO 27001 Implementer</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+
+    <div class="proof" aria-label="Proof points">
+      <div class="wrap">
+        <div class="stat"><div class="stat__n">3<small>/3</small></div><p class="stat__l">ISO 27001 implementations led to certification</p></div>
+        <div class="stat"><div class="stat__n">18<small>+</small></div><p class="stat__l">audits run across ISO 27001, SOC 2 and TISAX</p></div>
+        <div class="stat"><div class="stat__n"><small>~</small>700</div><p class="stat__l">users in a quarterly access review I designed and own</p></div>
+        <div class="stat"><div class="stat__n">40<small>+</small></div><p class="stat__l">security policies and procedures written</p></div>
+      </div>
+    </div>
+
+    <section aria-labelledby="sides-h">
+      <div class="wrap">
+        <div class="sec-head"><span class="mono">00 &middot; The work</span><h2 id="sides-h">Two halves of the same job.</h2></div>
+        <div class="sides">
+          <div class="side">
+            <h3>GRC &amp; audit</h3>
+            <p>Getting organizations certified and keeping the controls honest.</p>
+            <ul>
+              <li>ISO 27001 and 27701 implementation, Stage 1 through Stage 2</li>
+              <li>Internal audits and control testing: ISO 27001, SOC 2, TISAX AL3</li>
+              <li>Risk registers built from SCF gap assessments and pentest findings</li>
+              <li>Third-party risk: vendor tiering, SOC 2 report review, contract clauses</li>
+              <li>Policy and procedure sets with named control owners</li>
+            </ul>
+          </div>
+          <div class="side">
+            <h3>Identity &amp; engineering</h3>
+            <p>Building the access controls those audits look for.</p>
+            <ul>
+              <li>User access reviews and Active Directory group governance</li>
+              <li>Deprovisioning workflows routed to managers and tickets</li>
+              <li>Auth0, OAuth2 / OIDC, JWT and refresh-token validation</li>
+              <li>Three-tier RBAC and tenant isolation enforced in the database</li>
+              <li>API hardening: CORS policy and bearer-token checks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="sec-head"><span class="mono">01 &middot; Selected work</span><h2 id="work-h">Problems, what I did, what happened.</h2></div>
+        <div class="cases">
+          <article class="case">
+            <p class="mono case__id"><b>CTRL-01</b>Access governance<br />Kiewit &middot; 2026</p>
+            <div>
+              <h3>Built a quarterly access review from nothing.</h3>
+              <p>A restricted engineering environment needed recurring user access reviews and had no defined process. I wrote the SOP, set the cadence and make the keep-or-remove call on every account. A Power BI report joins the authorized roster to Active Directory group membership, surfaces anyone who lacks required authorization, and routes each removal to a manager or a ticket.</p>
+              <div class="tags"><span class="tag">User access review</span><span class="tag">Active Directory</span><span class="tag">Power BI</span><span class="tag">SOP</span></div>
+            </div>
+            <div class="result"><span class="mono">Result</span><strong>~700 users reviewed</strong><span>2 quarterly reviews complete; a process anyone on the team can run.</span></div>
+          </article>
+
+          <article class="case">
+            <p class="mono case__id"><b>CTRL-02</b>Certification<br />CBIZ Technology &middot; 2024 to 2026</p>
+            <div>
+              <h3>Three ISO 27001 implementations. Three certifications.</h3>
+              <p>Owned 8 to 10 client engagements at a time across SaaS, defense, automotive and financial services. Took three clients from policy set and risk assessment through Stage 1 and Stage 2. When one hit a Stage 2 gap with no backup procedure, I wrote it; the client passed its restore test and certified.</p>
+              <div class="tags"><span class="tag">ISO 27001</span><span class="tag">ISO 27701</span><span class="tag">Drata</span><span class="tag">Vanta</span><span class="tag">Risk registers</span></div>
+            </div>
+            <div class="result"><span class="mono">Result</span><strong>3 of 3 certified</strong><span>One also certified to ISO 27701 as a processor (DPA, ROPA, PII inventory).</span></div>
+          </article>
+
+          <article class="case">
+            <p class="mono case__id"><b>CTRL-03</b>Identity engineering<br />PortalVision &middot; 2025 to now</p>
+            <div>
+              <h3>Securing the identity layer of a multi-tenant SaaS.</h3>
+              <p>I co-founded and run PortalVision, a production SaaS for NCAA athletics. I own the security and software stack: Spring Security configuration, JWT and refresh-token validation (audience, issuer, user still active), three-tier RBAC enforced in the database, tenant isolation, and CORS and bearer-token checks on every API.</p>
+              <div class="tags"><span class="tag">Auth0</span><span class="tag">OAuth2 / OIDC</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">React</span></div>
+            </div>
+            <div class="result"><span class="mono">Result</span><strong>Live in production</strong><span>Running with an NCAA program since 2025. <a href="https://portalvision.io">portalvision.io &rarr;</a></span></div>
+          </article>
+
+          <article class="case">
+            <p class="mono case__id"><b>CTRL-04</b>Policy<br />Industry working group &middot; 2026</p>
+            <div>
+              <h3>Redlines adopted into an industry response to federal grid policy.</h3>
+              <p>As my company's cybersecurity SME, I reviewed an industry supply chain working group's response to DOE grid cybersecurity policy and drafted redlines to it.</p>
+              <div class="tags"><span class="tag">Supply chain security</span><span class="tag">Policy review</span></div>
+            </div>
+            <div class="result"><span class="mono">Result</span><strong>Made the final draft</strong><span>Jul to Sep 2026.</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <div class="wrap">
+        <div class="sec-head"><span class="mono">02 &middot; Experience</span><h2 id="exp-h">Where I've done it.</h2></div>
+        <div class="timeline">
+          <div class="role">
+            <p class="mono role__when">Jul 2026 to now</p>
+            <div>
+              <h3>Kiewit <span>&middot; Instrumentation &amp; Controls Engineer, Cybersecurity SME</span></h3>
+              <ul>
+                <li>Own the quarterly user access review and the Power BI control behind it.</li>
+                <li>Cybersecurity SME on client contract reviews; maintain the compliance documentation set.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="role">
+            <p class="mono role__when">Apr 2025 to now</p>
+            <div>
+              <h3>PortalVision <span>&middot; Co-Founder</span></h3>
+              <ul>
+                <li>Own security, identity and the full software stack: React, Spring, PostgreSQL, Auth0, Docker on Render.</li>
+                <li>Built Python data ingestion into Postgres.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="role">
+            <p class="mono role__when">Jul 2024 to Jun 2026</p>
+            <div>
+              <h3>CBIZ Technology <span>&middot; Associate Consultant</span></h3>
+              <ul>
+                <li>Led 3 ISO 27001 implementations to certification; ran 5 TISAX AL3 readiness audits and led 1 TISAX implementation.</li>
+                <li>Ran fieldwork and control testing on 18+ audits; built client risk registers and reviewed vendor security.</li>
+                <li>Tracked pentest findings against vulnerability management SLAs by CVSS score.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="role">
+            <p class="mono role__when">2024</p>
+            <div>
+              <h3>CBIZ <span>&middot; IT / Internal Audit Intern</span></h3>
+              <ul><li>Evaluated cybersecurity controls and ITGCs against FDICIA and SOX.</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <div class="sec-head"><span class="mono">03 &middot; Toolkit</span><h2 id="skills-h">What I use on real work.</h2></div>
+        <div class="skills">
+          <div class="skill"><h3 class="mono">Frameworks</h3><p>ISO 27001, ISO 27701, SOC 2 (Security, Availability), TISAX AL3 / VDA ISA, SCF, NIST CSF, SOX and FDICIA ITGCs</p></div>
+          <div class="skill"><h3 class="mono">GRC</h3><p>Risk assessment and treatment, risk registers, internal audit, control and evidence mapping, third-party risk, policy writing</p></div>
+          <div class="skill"><h3 class="mono">Identity &amp; access</h3><p>User access reviews, Active Directory groups, deprovisioning, RBAC, tenant isolation, Auth0, OAuth2 / OIDC, JWT</p></div>
+          <div class="skill"><h3 class="mono">Build</h3><p>Java (Spring Boot, Spring Security, JPA), React, PostgreSQL, Python</p></div>
+          <div class="skill"><h3 class="mono">Platforms</h3><p>Drata, Vanta, Power BI, Docker, Render</p></div>
+          <div class="skill"><h3 class="mono">Lab work</h3><p>Reverse engineering and binary exploitation in M.S. coursework: Ghidra, GDB, Metasploit, Wireshark, nmap</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="edu-h">
+      <div class="wrap">
+        <div class="sec-head"><span class="mono">04 &middot; Education</span><h2 id="edu-h">University of Kansas, twice.</h2></div>
+        <div class="edu">
+          <div class="panel">
+            <h3>M.S., Computer Science</h3>
+            <span class="mono">Dec 2023 &middot; Cybersecurity &amp; secure systems</span>
+            <p>Reverse engineering, binary exploitation, network security, cryptography, IoT and mobile security.</p>
+            <hr />
+            <h3>MeshMapper</h3>
+            <span class="mono">M.S. project &middot; 2023</span>
+            <p>Built the device-mapping platform for KU research on secure Bluetooth mesh networks with encryption key rotation on ESP32 firmware. JavaScript, hosted on GCP.</p>
+          </div>
+          <div class="panel">
+            <h3>B.S., Computer Science</h3>
+            <span class="mono">May 2022 &middot; Cybersecurity certificate</span>
+            <hr />
+            <h3>Certifications</h3>
+            <span class="mono">Current</span>
+            <p>CompTIA Security+ (Oct 2025)<br />ISO/IEC 27001 Implementer (Jan 2025)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact" id="contact">
+      <div class="wrap">
+        <div>
+          <p class="mono" style="color: var(--accent)">05 &middot; Contact</p>
+          <h2>Let's <em>talk.</em></h2>
+          <p>Based in Lenexa, KS. The fastest way to reach me is email or LinkedIn.</p>
+        </div>
+        <ul class="links">
+          <li><a href="mailto:hunterglass25@gmail.com">Email <span class="mono">hunterglass25@gmail.com</span></a></li>
+          <li><a href="https://www.linkedin.com/in/hunter-glass-734313195/">LinkedIn <span class="mono">&nearr;</span></a></li>
+          <li><a href="https://github.com/hunterg123">GitHub <span class="mono">&nearr;</span></a></li>
+          <li><a href="#">Resume <span class="mono">PDF</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer><div class="wrap mono"><span>&copy; 2026 Hunter Glass</span><a href="#top">Top &uarr;</a></div></footer>
+</body>
+</html>
